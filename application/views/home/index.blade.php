@@ -64,6 +64,8 @@
 
           <div id="share_toolbar">
               <!-- Place this tag after the last share tag. -->
+              <div class="g-plus" data-action="share"></div>
+              
               <script type="text/javascript">
                 (function() {
                   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
