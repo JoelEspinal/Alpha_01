@@ -8,6 +8,9 @@
 
     <title>Alpha 01</title>
 
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="timeline-js/timeline.js"></script>
+    <link rel="stylesheet" type="text/css" href="timeline-js/timeline.css">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
@@ -55,6 +58,12 @@
 
             <div>
               <iframe width="720" height="400" src="//www.youtube.com/embed/eOG90Q8EfRo" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div>
+                <button class="btn">Show Timeline</button>
+            </div>
+            <div id="timeline-container">
+
             </div>
           <hr>
           <p>This is a very basic starter template for a blog homepage. It makes use of Glyphicons that are built into Bootstrap 3, and it makes use of the Pager at the bottom of the page. Make sure you get the Glyphicons files by downloading the entire <code>/fonts</code> directory that you can download in the source files or at <a href="http://getbootstrap.com">getbootstrap.com</a>. That directory has all of the web fonts in it which makes Glyphicons work.</p>
@@ -119,5 +128,66 @@
     <!-- Make sure to add jQuery - download the most recent version at http://jquery.com/ -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+
+        google.load("visualization", "1");
+
+        // Set callback to run when API is loaded
+        //google.setOnLoadCallback(drawVisualization);
+        $(document).ready(function(){
+          drawVisualization();
+        });
+
+        var timeline;
+        var data;
+
+        function getSelectedRow() {
+            var row = undefined;
+            var sel = timeline.getSelection();
+            if (sel.length) {
+                if (sel[0].row != undefined) {
+                    row = sel[0].row;
+                }
+            }
+            return row;
+        }
+
+        var drawVisualization = function(){
+          data = new google.visualization.DataTable();
+          data.addColumn('datetime', 'start');
+          data.addColumn('datetime', 'end');
+          data.addColumn('string', 'content');
+
+         
+          var options = {
+                width:  "100%",
+                height: "100px",
+                //height: "auto",
+                editable: false,   // enable dragging and editing items
+                //axisOnTop: true,
+                style: "box",
+                showCustomTime: true
+          };
+
+          timeline = new links.Timeline(document.getElementById('timeline-container'));
+
+          console.log(timeline);
+          console.log(document.getElementById('timeline-container'));
+
+          timeline.draw(data, options);
+
+
+        }
+
+        function setTime() {
+            if (!timeline) return;
+
+            var newStartDate = new Date(document.getElementById('startDate').value);
+            var newEndDate   = new Date(document.getElementById('endDate').value);
+            timeline.setVisibleChartRange(newStartDate, newEndDate);
+        }
+
+
+    </script>
   </body>
 </html>
