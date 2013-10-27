@@ -60,7 +60,7 @@
               <iframe width="720" height="400" src="//www.youtube.com/embed/eOG90Q8EfRo" frameborder="0" allowfullscreen></iframe>
             </div>
             <div>
-                <button class="btn">Show Timeline</button>
+                <button id="showOrHide" class="btn">Show Timeline</button>
             </div>
             <div id="timeline-container">
 
@@ -214,6 +214,10 @@
             var newEndDate   = new Date(document.getElementById('endDate').value);
             timeline.setVisibleChartRange(newStartDate, newEndDate);
         }
+
+        $(document).ready(function(){
+            $("#showOrHide");
+        });
 
 
     </script>
