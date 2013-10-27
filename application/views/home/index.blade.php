@@ -47,8 +47,8 @@
         <div class="col-lg-8">
         
           <!-- blog entry -->
-          <h1><a href="#">A Blog Home Template for Bootstrap 3</a></h1>
-          <p class="lead">by <a href="index.html">Start Bootstrap</a></p>
+          <h1><a href="#">Create a Responsive Website Using HTML5 and CSS3</a></h1>
+          <p class="lead">by <a href="index.html">John doe</a></p>
           <hr>
           <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
           <hr>
@@ -57,10 +57,38 @@
               <iframe width="720" height="400" src="//www.youtube.com/embed/eOG90Q8EfRo" frameborder="0" allowfullscreen></iframe>
             </div>
           <hr>
-          <p>This is a very basic starter template for a blog homepage. It makes use of Glyphicons that are built into Bootstrap 3, and it makes use of the Pager at the bottom of the page. Make sure you get the Glyphicons files by downloading the entire <code>/fonts</code> directory that you can download in the source files or at <a href="http://getbootstrap.com">getbootstrap.com</a>. That directory has all of the web fonts in it which makes Glyphicons work.</p>
+          <p></p>
           <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
                     
           <hr>
+
+          <div id="share_toolbar">
+              <!-- Place this tag after the last share tag. -->
+              <script type="text/javascript">
+                (function() {
+                  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                  po.src = 'https://apis.google.com/js/plusone.js';
+                  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+              </script>
+              <!-- google plus share -->
+
+              <!-- twitter share -->
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="BlaShadow">Tweet</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+              <!-- twitter share -->
+
+              <!-- facebook share  -->
+              <div id="fb-root"></div>
+              <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));</script>
+              <!-- facebook share -->
+          </div>
           
         </div>
         
@@ -79,9 +107,9 @@
               <div class="row">
                 <div class="col-lg-6">
                   <ul class="list-unstyled">
-                    <li><a href="#dinosaurs">Dinosaurs</a></li>
-                    <li><a href="#spaceships">Spaceship</a>s</li>
-                    <li><a href="#fried-foods">Fried Foods</a></li>
+                    <li><a href="#dinosaurs">JAVA</a></li>
+                    <li><a href="#spaceships">Cook</a>s</li>
+                    <li><a href="#fried-foods">Math</a></li>
                     <li><a href="#wild-animals">Wild Animals</a></li>
                   </ul>
                 </div>
@@ -97,7 +125,7 @@
           </div><!-- /well -->
           <div class="well">
             <h4>Side Widget Well</h4>
-            <p>Bootstrap's default well's work great for side widgets! What is a widget anyways...?</p>
+            <p>asdasd</p>
           </div><!-- /well -->
         </div>
       </div>
