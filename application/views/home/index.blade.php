@@ -17,6 +17,11 @@
     <!-- Add custom CSS here -->
     <link href="css/blog-home.css" rel="stylesheet">
 
+    <style type="text/css">
+        .comment div {
+            text-align: right;
+        }
+    </style>
   </head>
 
   <body>
@@ -30,7 +35,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+          <a class="navbar-brand" href="index.html">ALPHA-01</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -65,9 +70,58 @@
             <div id="timeline-container">
 
             </div>
+            <div id="comments">
+                <div>
+                  <h3>Comments</h3>
+                  <hr> 
+                </div>
+                <div class="comment">
+                  <p>
+                      Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum
+                  </p>
+                  <div>
+                      <a href="#">Jane Doe</a>
+                  </div>
+                  
+                </div>
+                <br>
+                <br>
+                <div class="comment">
+                  <p>
+                      Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum
+                  </p>
+                  <div>
+                      <a href="#">Jane Doe</a>
+                  </div>
+                  
+                </div>
+
+                <br>
+                <br>
+                <div class="comment">
+                  <p>
+                      Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum
+                  </p>
+                  <div>
+                      <a href="#">Jane Doe</a>
+                  </div>
+                  
+                </div>
+                <br>
+                <br>
+                <div class="comment">
+                  <p>
+                      Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum
+                  </p>
+                  <div>
+                      <a href="#">Jane Doe</a>
+                  </div>
+                  
+                </div>
+               
+            </div>
           <hr>
           <p></p>
-          <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
                     
           <hr>
 
@@ -119,7 +173,7 @@
                 <div class="col-lg-6">
                   <ul class="list-unstyled">
                     <li><a href="#dinosaurs">JAVA</a></li>
-                    <li><a href="#spaceships">Cook</a>s</li>
+                    <li><a href="#spaceships">Cook</a></li>
                     <li><a href="#fried-foods">Math</a></li>
                     <li><a href="#wild-animals">Wild Animals</a></li>
                   </ul>
@@ -133,10 +187,6 @@
                   </ul>
                 </div>
               </div>
-          </div><!-- /well -->
-          <div class="well">
-            <h4>Side Widget Well</h4>
-            <p>asdasd</p>
           </div><!-- /well -->
         </div>
       </div>
@@ -218,7 +268,18 @@
         }
 
         $(document).ready(function(){
-            $("#showOrHide");
+            $("#timeline-container").hide();
+
+            $("#showOrHide").on('click', function(){
+              if ($("#timeline-container").is(":visible")) {
+                $("#timeline-container").hide();
+                $("#showOrHide").text('Show Timeline');
+              }
+              else{
+                $("#timeline-container").show();
+                $("#showOrHide").text('Hide Timeline');
+              }
+            });
         });
 
 
